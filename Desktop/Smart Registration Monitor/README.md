@@ -1,5 +1,3 @@
-
-
 # Smart Registration Monitor 🎓
 
 A comprehensive student registration system with facial recognition, photo capture, and admin approval workflow.
@@ -187,10 +185,4 @@ React team for frontend components
 
 Contributors and testers
 
-👨‍💻 Developer
-Eldred - GitHub
-
-Last updated: 2024
-
-Smart Registration Monitor - Streamlining student registration with cutting-edge technology! 🎓✨
 
