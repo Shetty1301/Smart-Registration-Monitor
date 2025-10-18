@@ -1,5 +1,3 @@
-
-
 # Smart Registration Monitor 🎓
 
 A comprehensive student registration system with facial recognition, photo capture, and admin approval workflow.
