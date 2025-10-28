@@ -9,7 +9,6 @@
   <title>Smart Attendance System - Advanced Facial Recognition</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
 </head>
 
 <body>
@@ -23,7 +22,12 @@
         <ul role="menubar">
           <li role="none">
             <a href="#" onclick="showSection('home')" id="navHome" class="active" role="menuitem" aria-current="page">
-              <i class="fas fa-home"></i> Dashboard
+              <i class="fas fa-home"></i> Home
+            </a>
+          </li>
+          <li role="none">
+            <a href="#" onclick="showSection('dashboard')" id="navDashboard" role="menuitem">
+              <i class="fas fa-chart-line"></i> Dashboard
             </a>
           </li>
           <li role="none">
@@ -56,101 +60,230 @@
   </header>
 
   <main>
-    <!-- Home Section -->
+    <!-- Home Landing Page -->
     <section id="home" class="page active" aria-labelledby="home-title">
-      <div class="dashboard-header">
-        <h1 id="home-title">Dashboard Overview</h1>
-        <div class="date-display">
-          <i class="fas fa-calendar-alt"></i>
-          <span id="currentDate"></span>
-        </div>
-      </div>
-      
-      <div class="stats-grid">
-        <div class="stat-card primary">
-          <div class="stat-icon">
-            <i class="fas fa-users"></i>
-          </div>
-          <div class="stat-info">
-            <h3>Total Students</h3>
-            <span id="totalStudents" class="stat-number">0</span>
-            <div class="stat-trend">
-              <i class="fas fa-arrow-up"></i>
-              <span>5% this month</span>
-            </div>
-          </div>
+      <div class="hero-section">
+        <div class="hero-particles">
+          <div class="particle" style="width: 100px; height: 100px; top: 10%; left: 10%; animation-delay: 0s;"></div>
+          <div class="particle" style="width: 50px; height: 50px; top: 60%; left: 80%; animation-delay: 5s;"></div>
+          <div class="particle" style="width: 75px; height: 75px; top: 80%; left: 20%; animation-delay: 10s;"></div>
         </div>
         
-        <div class="stat-card success">
-          <div class="stat-icon">
-            <i class="fas fa-check-circle"></i>
-          </div>
-          <div class="stat-info">
-            <h3>Present Today</h3>
-            <span id="attendanceToday" class="stat-number">0</span>
-            <div class="stat-trend">
-              <i class="fas fa-arrow-up"></i>
-              <span>92% attendance rate</span>
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 id="home-title">Transform Attendance with AI-Powered Recognition</h1>
+            <p>Experience the future of student attendance management with cutting-edge facial recognition technology. Fast, accurate, and secure.</p>
+            <div class="hero-buttons">
+              <button class="hero-btn hero-btn-primary" onclick="showSection('dashboard')">
+                <i class="fas fa-rocket"></i>
+                Get Started
+              </button>
+              <button class="hero-btn hero-btn-secondary" onclick="showSection('register')">
+                <i class="fas fa-play-circle"></i>
+                Watch Demo
+              </button>
             </div>
           </div>
-        </div>
-        
-        <div class="stat-card danger">
-          <div class="stat-icon">
-            <i class="fas fa-times-circle"></i>
-          </div>
-          <div class="stat-info">
-            <h3>Absent Today</h3>
-            <span id="absentStudents" class="stat-number">0</span>
-            <div class="stat-trend">
-              <i class="fas fa-arrow-down"></i>
-              <span>8% absence rate</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="stat-card warning">
-          <div class="stat-icon">
-            <i class="fas fa-chart-line"></i>
-          </div>
-          <div class="stat-info">
-            <h3>Monthly Average</h3>
-            <span id="monthlyAverage" class="stat-number">95%</span>
-            <div class="stat-trend">
-              <i class="fas fa-arrow-up"></i>
-              <span>2% from last month</span>
+          
+          <div class="hero-visual">
+            <div class="hero-mockup">
+              <div class="mockup-screen">
+                <div class="mockup-bar"></div>
+                <div class="mockup-content">
+                  <div class="mockup-card" style="animation-delay: 0s;"></div>
+                  <div class="mockup-card" style="animation-delay: 0.2s;"></div>
+                  <div class="mockup-card" style="animation-delay: 0.4s;"></div>
+                  <div class="mockup-card" style="animation-delay: 0.6s;"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="dashboard-content">
-        <div class="recent-activity">
-          <h3>Recent Activity</h3>
-          <div class="activity-list" id="recentActivity">
-            <!-- Activities will be populated by JavaScript -->
+      <div class="features-section">
+        <div class="section-title">
+          <h2>Powerful Features</h2>
+          <p>Everything you need to manage student attendance efficiently and effectively</p>
+        </div>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3>AI Face Recognition</h3>
+            <p>Advanced machine learning algorithms ensure accurate student identification in seconds with 99.9% accuracy.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>Real-Time Tracking</h3>
+            <p>Monitor attendance in real-time with instant notifications and live updates across all devices.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-chart-bar"></i>
+            </div>
+            <h3>Analytics Dashboard</h3>
+            <p>Comprehensive insights with detailed reports, trends, and analytics to improve attendance rates.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Secure & Private</h3>
+            <p>Bank-level encryption protects all student data with complete GDPR compliance and privacy.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Mobile Friendly</h3>
+            <p>Access from anywhere on any device with our responsive design and native mobile apps.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-download"></i>
+            </div>
+            <h3>Easy Export</h3>
+            <p>Generate and export attendance reports in multiple formats including PDF, Excel, and CSV.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-section">
+        <div class="stats-container">
+          <div class="stat-item">
+            <span class="stat-number">10,000+</span>
+            <span class="stat-label">Active Students</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Institutions</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">99.9%</span>
+            <span class="stat-label">Accuracy Rate</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">2M+</span>
+            <span class="stat-label">Records Processed</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-section">
+        <h2>Ready to Transform Your Attendance?</h2>
+        <p>Join thousands of institutions already using our smart attendance system</p>
+        <button class="hero-btn hero-btn-primary" onclick="showSection('register')">
+          <i class="fas fa-rocket"></i>
+          Start Free Trial
+        </button>
+      </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="page" aria-labelledby="dashboard-title">
+      <div class="dashboard-container">
+        <div class="dashboard-header">
+          <h1 id="dashboard-title">Dashboard Overview</h1>
+          <div class="date-display">
+            <i class="fas fa-calendar-alt"></i>
+            <span id="currentDate"></span>
           </div>
         </div>
         
-        <div class="quick-actions">
-          <h3>Quick Actions</h3>
-          <div class="action-buttons">
-            <button class="action-btn" onclick="showSection('register')">
-              <i class="fas fa-user-plus"></i>
-              <span>Register Student</span>
-            </button>
-            <button class="action-btn" onclick="showSection('admin')">
-              <i class="fas fa-camera"></i>
-              <span>Start Face Scan</span>
-            </button>
-            <button class="action-btn" onclick="generateReport()">
-              <i class="fas fa-download"></i>
-              <span>Export Report</span>
-            </button>
-            <button class="action-btn" onclick="showSection('student')">
-              <i class="fas fa-search"></i>
-              <span>View Students</span>
-            </button>
+        <div class="stats-grid">
+          <div class="stat-card primary">
+            <div class="stat-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="stat-info">
+              <h3>Total Students</h3>
+              <span id="totalStudents" class="stat-number-dash">0</span>
+              <div class="stat-trend">
+                <i class="fas fa-arrow-up"></i>
+                <span>5% this month</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="stat-card success">
+            <div class="stat-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="stat-info">
+              <h3>Present Today</h3>
+              <span id="attendanceToday" class="stat-number-dash">0</span>
+              <div class="stat-trend">
+                <i class="fas fa-arrow-up"></i>
+                <span>92% attendance rate</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="stat-card danger">
+            <div class="stat-icon">
+              <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="stat-info">
+              <h3>Absent Today</h3>
+              <span id="absentStudents" class="stat-number-dash">0</span>
+              <div class="stat-trend">
+                <i class="fas fa-arrow-down"></i>
+                <span>8% absence rate</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="stat-card warning">
+            <div class="stat-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="stat-info">
+              <h3>Monthly Average</h3>
+              <span id="monthlyAverage" class="stat-number-dash">95%</span>
+              <div class="stat-trend">
+                <i class="fas fa-arrow-up"></i>
+                <span>2% from last month</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-content">
+          <div class="recent-activity">
+            <h3>Recent Activity</h3>
+            <div class="activity-list" id="recentActivity"></div>
+          </div>
+          
+          <div class="quick-actions">
+            <h3>Quick Actions</h3>
+            <div class="action-buttons">
+              <button class="action-btn" onclick="showSection('register')">
+                <i class="fas fa-user-plus"></i>
+                <span>Register Student</span>
+              </button>
+              <button class="action-btn" onclick="showSection('admin')">
+                <i class="fas fa-camera"></i>
+                <span>Start Face Scan</span>
+              </button>
+              <button class="action-btn" onclick="generateReport()">
+                <i class="fas fa-download"></i>
+                <span>Export Report</span>
+              </button>
+              <button class="action-btn" onclick="showSection('student')">
+                <i class="fas fa-search"></i>
+                <span>View Students</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -311,7 +444,7 @@
         <div class="scan-section">
           <div class="admin-card">
             <h3>
-              <i class="fas fa-face-recognition"></i>
+              <i class="fas fa-camera"></i>
               Face Recognition Scanner
             </h3>
             <div class="scan-status">
@@ -430,18 +563,6 @@
             </h4>
             <div class="notification-settings">
               <label class="switch">
-                <input type="checkbox" id="emailNotifications" checked aria-label="Enable email notifications">
-                <span class="slider"></span>
-                <span>Email Notifications</span>
-              </label>
-              
-              <label class="switch">
-                <input type="checkbox" id="pushNotifications" checked aria-label="Enable push notifications">
-                <span class="slider"></span>
-                <span>Push Notifications</span>
-              </label>
-              
-              <label class="switch">
                 <input type="checkbox" id="attendanceAlerts" aria-label="Enable attendance alerts">
                 <span class="slider"></span>
                 <span>Attendance Alerts</span>
@@ -455,7 +576,21 @@
 
   <!-- Toast Notifications -->
   <div id="toastContainer" class="toast-container"></div>
-
+  <script src="script.js"></script>
+  
 </body>
 
-</html>
+</html> 
+<!-- type="checkbox" id="emailNotifications" checked aria-label="Enable email notifications">
+                <span class="slider"></span>
+                <span>Email Notifications</span>
+              </label>
+              
+              <label class="switch">
+                <input type="checkbox" id="pushNotifications" checked aria-label="Enable push notifications">
+                <span class="slider"></span>
+                <span>Push Notifications</span>
+              </label>
+              
+              <label class="switch">
+                <input -->
